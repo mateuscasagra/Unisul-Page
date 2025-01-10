@@ -1,0 +1,82 @@
+.contact {
+  padding-top: 100px;
+  display: grid;
+  gap: 50px; /* Espaço entre os elementos principais */
+  grid-template-columns: 1fr; /* Padrão para dispositivos menores */
+  justify-items: center;
+  align-items: center;
+}
+
+.info {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr; /* Divisão em duas colunas */
+  align-items: center;
+  justify-content: center;
+}
+
+.info img {
+  max-width: 100%;
+  height: auto; /* Mantém as proporções da imagem */
+}
+
+.info .txt {
+  display: grid;
+  gap: 8px;
+  text-align: center; /* Centraliza o texto */
+  max-width: 500px; /* Limita a largura máxima */
+}
+
+.info .txt h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.info .txt p,
+.info .txt span {
+  font-size: 1rem;
+}
+
+.contact > div:last-child img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact {
+    gap: 30px;
+  }
+
+  .info {
+    grid-template-columns: 1fr; /* Empilha os elementos verticalmente */
+  }
+
+  .info .txt h2 {
+    font-size: 1.25rem; /* Ajusta o tamanho do texto */
+  }
+
+  .info .txt p,
+  .info .txt span {
+    font-size: 0.9rem;
+  }
+
+  .contact > div:last-child img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    gap: 20px; /* Reduz o espaço entre os elementos */
+  }
+
+  .info .txt h2 {
+    font-size: 1rem;
+  }
+
+  .info .txt p,
+  .info .txt span {
+    font-size: 0.8rem;
+  }
+}

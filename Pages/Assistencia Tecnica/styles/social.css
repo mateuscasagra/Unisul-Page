@@ -1,0 +1,15 @@
+.social {
+  padding-bottom: 60px;
+  text-align: center;
+  h2 {
+    font-weight: 500;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  gap: 40px;
+}
