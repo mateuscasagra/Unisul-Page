@@ -17,7 +17,6 @@
   justify-content: space-between; /* Espaça os elementos verticalmente */
   align-items: center;
   padding: 15px;
-  border: 1px solid black;
   background-color: #f9f9f9;
   border-radius: 8px;
   text-align: center;
@@ -56,6 +55,7 @@
   font-weight: bold;
 }
 
+
 .contact {
   padding-top: 100px;
   display: grid;
@@ -65,33 +65,113 @@
   align-items: center;
 }
 
-.info {
+.info-machine {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 1fr; /* Divisão em duas colunas */
   align-items: center;
   justify-content: center;
+  padding-bottom: 100px;
 }
 
-.info img {
+.info-machine img {
   max-width: 100%;
   height: auto; /* Mantém as proporções da imagem */
 }
 
-.info .txt {
+.info-machine .txt {
   display: grid;
   gap: 8px;
   text-align: center; /* Centraliza o texto */
   max-width: 500px; /* Limita a largura máxima */
 }
 
-.info .txt h2 {
+.info-machine .txt h2 {
   font-weight: 600;
   font-size: 1.5rem;
 }
 
-.info .txt p,
-.info .txt span {
+.info-machine .txt p,
+.info-machine .txt span {
+  font-size: 1rem;
+}
+
+.contact > div:last-child img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact {
+    gap: 30px;
+  }
+
+  .info-machine {
+    grid-template-columns: 1fr; /* Empilha os elementos verticalmente */
+  }
+
+  .info-machine .txt h2 {
+    font-size: 1.25rem; /* Ajusta o tamanho do texto */
+  }
+
+  .info-machine .txt p,
+  .info-machine .txt span {
+    font-size: 0.9rem;
+  }
+
+  .contact > div:last-child img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    gap: 50px; /* Reduz o espaço entre os elementos */
+  }
+
+  .info-machine .txt h2 {
+    font-size: 1rem;
+  }
+
+  .info-machine .txt p,
+  .info-machine .txt span {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+.info-worker {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr; /* Divisão em duas colunas */
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.info-worker img {
+  max-width: 100%;
+  height: auto; /* Mantém as proporções da imagem */
+}
+
+.info-worker .txt {
+  display: grid;
+  gap: 8px;
+  text-align: center; /* Centraliza o texto */
+  max-width: 500px; /* Limita a largura máxima */
+}
+
+.info-worker .txt h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.info-worker .txt p,
+.info-worker .txt span {
   font-size: 1rem;
 }
 
@@ -106,16 +186,16 @@
     gap: 30px;
   }
 
-  .info {
+  .info-worker {
     grid-template-columns: 1fr; /* Empilha os elementos verticalmente */
   }
 
-  .info .txt h2 {
+  .info-worker .txt h2 {
     font-size: 1.25rem; /* Ajusta o tamanho do texto */
   }
 
-  .info .txt p,
-  .info .txt span {
+  .info-worker .txt p,
+  .info-worker .txt span {
     font-size: 0.9rem;
   }
 
@@ -129,15 +209,17 @@
     gap: 20px; /* Reduz o espaço entre os elementos */
   }
 
-  .info .txt h2 {
+  .info-worker .txt h2 {
     font-size: 1rem;
   }
 
-  .info .txt p,
-  .info .txt span {
+  .info-worker .txt p,
+  .info-worker .txt span {
     font-size: 0.8rem;
   }
 }
+
+
 
 .social {
   padding-bottom: 60px;
@@ -154,3 +236,5 @@
   line-height: 0;
   gap: 40px;
 }
+
+
